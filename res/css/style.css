@@ -1,0 +1,314 @@
+@import url("reset.css") screen;
+@import url("animation.css") screen;
+
+/* Common */
+
+html, body {
+    /*background:#eaeaea url(../img/bg.png) repeat;*/
+    background-color: SlateGray;
+    font-size: 12px;
+    font-family: "Open Sans", serif;
+    min-width: 750px;
+    margin: 0;
+    padding: 0;
+    color: #aaa;
+}
+
+.slide img {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+}
+
+.content h1 {
+    font-size: 48px;
+    color: #000;
+    text-shadow: 0px 1px 1px #f4f4f4;
+    padding: 60px 0 30px;
+}
+
+h2 {
+    /*background-color: rgba(0,0,0,.4);
+width: 116px;
+height: 116px;
+padding: 50px 0;
+border-radius: 50%;
+margin-left: -6px;
+margin-top: -1px;*/
+}
+
+
+/* LAYOUT */
+
+.container {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 475px;
+    height: 500px;
+    float: left;
+}
+
+
+/* CONTENT SLIDER */
+
+#content-slider {
+    width: 100%;
+    height: 400px;
+    margin: 10px auto 0;
+}
+
+
+/* SLIDER */
+
+#slider {
+    background: rgba(0, 0, 0, 0);
+    border: 5px solid #eaeaea;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    height: 400px;
+    width: 400px;
+    margin: 40px auto 0;
+    overflow: visible;
+    position: relative;
+    border-radius: 50%;
+}
+
+#mask {
+    overflow: hidden;
+    height: 400px;
+    text-align: left;
+}
+
+#slider ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#slider li {
+    width: 680px;
+    height: 320px;
+    position: absolute;
+    top: -325px;
+    list-style: none;
+}
+
+#slider li.firstanimation {
+    animation: cycle 25s linear infinite;
+    -moz-animation: cycle 25s linear infinite;
+    -webkit-animation: cycle 25s linear infinite;
+}
+
+#slider li.secondanimation {
+    animation: cycletwo 25s linear infinite;
+    -moz-animation: cycletwo 25s linear infinite;
+    -webkit-animation: cycletwo 25s linear infinite;
+}
+
+#slider li.thirdanimation {
+    animation: cyclethree 25s linear infinite;
+    -moz-animation: cyclethree 25s linear infinite;
+    -webkit-animation: cyclethree 25s linear infinite;
+}
+
+#slider li.fourthanimation {
+    animation: cyclefour 25s linear infinite;
+    -moz-animation: cyclefour 25s linear infinite;
+    -webkit-animation: cyclefour 25s linear infinite;
+}
+
+#slider li.fifthanimation {
+    animation: cyclefive 25s linear infinite;
+    -moz-animation: cyclefive 25s linear infinite;
+    -webkit-animation: cyclefive 25s linear infinite;
+}
+
+#slider .tooltip {
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 400px;
+    height: 60px;
+    position: relative;
+    bottom: 225px;
+    left: -420px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+#slider .tooltip h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 60px;
+    padding: 0 0 0 20px;
+}
+
+#slider li#first:hover .tooltip, #slider li#second:hover .tooltip, #slider li#third:hover .tooltip, #slider li#fourth:hover .tooltip, #slider li#fifth:hover .tooltip {
+    left: 0px;
+}
+
+#slider:hover li, #slider:hover .progress-bar {
+    animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+
+/* PROGRESS BAR */
+
+.progress-bar {
+    position: relative;
+    top: 6px;
+    width: 400px;
+    height: 5px;
+    background: #000;
+    animation: fullexpand 25s ease-out infinite;
+    -moz-animation: fullexpand 25s ease-out infinite;
+    -webkit-animation: fullexpand 25s ease-out infinite;
+}
+
+.circle {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    top: 50.25%;
+    left: 50.3%;
+    margin-top: -1px;
+    margin-left: -1px;
+    text-align: center;
+    background-color: red;
+    border: 3px solid black;
+    transform: translate(-50%, -50%);
+}
+
+.ani {
+    border-radius: 50%;
+    height: 2px;
+    width: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -1px;
+    margin-left: -1px;
+    box-shadow: -75px -125px 0 40px #6cce74, 75px -125px 0 40px #c18d46, 146px 0px 0 40px #c14745, 75px 125px 0 40px #2e1e5b, -75px 125px 0 40px #9c37a6, -146px 0px 0 40px #76bdd1;
+    animation: rotate 5s infinite linear;
+    -webkit-animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+    16.67% {
+        box-shadow: -75px -125px 0 40px #76bdd1, 75px -125px 0 40px #6cce74, 146px 0px 0 40px #c18d46, 75px 125px 0 40px #c14745, -75px 125px 0 40px #2e1e5b, -146px 0px 0 40px #9c37a6;
+    }
+    33.33% {
+        box-shadow: -75px -125px 0 40px #9c37a6, 75px -125px 0 40px #76bdd1, 146px 0px 0 40px #6cce74, 75px 125px 0 40px #c18d46, -75px 125px 0 40px #c14745, -146px 0px 0 40px #2e1e5b;
+    }
+    50% {
+        box-shadow: -75px -125px 0 40px #2e1e5b, 75px -125px 0 40px #9c37a6, 146px 0px 0 40px #76bdd1, 75px 125px 0 40px #6cce74, -75px 125px 0 40px #c18d46, -146px 0px 0 40px #c14745;
+    }
+    66.67% {
+        box-shadow: -75px -125px 0 40px #c14745, 75px -125px 0 40px #2e1e5b, 146px 0px 0 40px #9c37a6, 75px 125px 0 40px #76bdd1, -75px 125px 0 40px #6cce74, -146px 0px 0 40px #c18d46;
+    }
+    88.88% {
+        box-shadow: -75px -125px 0 40px #c18d46, 75px -125px 0 40px #c14745, 146px 0px 0 40px #2e1e5b, 75px 125px 0 40px #9c37a6, -75px 125px 0 40px #76bdd1, -146px 0px 0 40px #6cce74;
+    }
+    100% {
+        transform: rotate(-360deg);
+        box-shadow: -75px -125px 0 40px #6cce74, 75px -125px 0 40px #c18d46, 146px 0px 0 40px #c14745, 75px 125px 0 40px #2e1e5b, -75px 125px 0 40px #9c37a6, -146px 0px 0 40px #76bdd1;
+    }
+}
+
+@-webkit-keyframes rotate {
+    16.67% {
+        box-shadow: -75px -125px 0 40px #76bdd1, 75px -125px 0 40px #6cce74, 146px 0px 0 40px #c18d46, 75px 125px 0 40px #c14745, -75px 125px 0 40px #2e1e5b, -146px 0px 0 40px #9c37a6;
+    }
+    33.33% {
+        box-shadow: -75px -125px 0 40px #9c37a6, 75px -125px 0 40px #76bdd1, 146px 0px 0 40px #6cce74, 75px 125px 0 40px #c18d46, -75px 125px 0 40px #c14745, -146px 0px 0 40px #2e1e5b;
+    }
+    50% {
+        box-shadow: -75px -125px 0 40px #2e1e5b, 75px -125px 0 40px #9c37a6, 146px 0px 0 40px #76bdd1, 75px 125px 0 40px #6cce74, -75px 125px 0 40px #c18d46, -146px 0px 0 40px #c14745;
+    }
+    66.67% {
+        box-shadow: -75px -125px 0 40px #c14745, 75px -125px 0 40px #2e1e5b, 146px 0px 0 40px #9c37a6, 75px 125px 0 40px #76bdd1, -75px 125px 0 40px #6cce74, -146px 0px 0 40px #c18d46;
+    }
+    88.88% {
+        box-shadow: -75px -125px 0 40px #c18d46, 75px -125px 0 40px #c14745, 146px 0px 0 40px #2e1e5b, 75px 125px 0 40px #9c37a6, -75px 125px 0 40px #76bdd1, -146px 0px 0 40px #6cce74;
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+        box-shadow: -75px -125px 0 40px #6cce74, 75px -125px 0 40px #c18d46, 146px 0px 0 40px #c14745, 75px 125px 0 40px #2e1e5b, -75px 125px 0 40px #9c37a6, -146px 0px 0 40px #76bdd1;
+    }
+}
+
+button {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    opacity: .75;
+    font-weight: bold;
+    background-size: cover;
+    font-size: 20px;
+    color: white;
+    text-shadow: 0px 0px 20px black;
+    /*text-shadow: 0px 1px 1px #f4f4f4;*/
+    /*-webkit-text-fill-color: black;
+  -webkit-text-stroke: 1px white;*/
+    /*text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;*/
+}
+
+button:hover {
+    opacity: 1;
+    border: 3px solid red;
+}
+
+.buttonbar {
+    text-align: center;
+    position: relative;
+    float: left;
+    width: 120px;
+    height: 475px;
+    margin-top: 15px;
+}
+
+.main {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.page {
+    text-align: center;
+}
+
+#button1 {
+    background-image: url("../../images/img2.jpg");
+    margin-left: -35px;
+}
+
+#button2 {
+    background-image: url("../../images/img3.jpg");
+}
+
+#button3 {
+    /*background-image: url("../../images/resume_screenshot.png");*/
+    margin-left: -35px;
+}
+
+#button4 {
+    background-image: url("../../images/resume_screenshot.png");
+    margin-left: 35px;
+}
+
+#button5 {
+    /*background-image: url("../../images/img1.jpg");*/
+}
+
+#button6 {
+    /*background-image: url("../../images/img1.jpg");*/
+    margin-left: 35px;
+}
