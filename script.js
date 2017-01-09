@@ -6,3 +6,7 @@ $( "#button1" ).on( "click", function() {
   window.location.href = 'https://dmozzoni.github.io/ProjectOne/';
   return false;
 });
+$( "#button2" ).on( "click", function() {
+  window.location.href = 'http://butterfly-life.herokuapp.com/';
+  return false;
+});
