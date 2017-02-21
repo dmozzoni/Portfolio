@@ -247,9 +247,9 @@ button {
     height: 120px;
     border: 2px solid black;
     border-radius: 50%;
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px auto;
+    /*margin-top: 30px;
+    margin-bottom: 30px;*/
     opacity: .75;
     font-weight: bold;
     background-size: cover;
@@ -305,7 +305,7 @@ button:hover {
 }
 
 #button5 {
-    /*background-image: url("../../images/img1.jpg");*/
+    background-image: url("../../images/project4.gif");
 }
 
 #button6 {
