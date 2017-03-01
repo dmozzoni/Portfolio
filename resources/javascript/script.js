@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     $("#button4").on("click", function() {
-        window.location.href = 'files/Mozzoni_resume.pdf';
+        window.location.href = 'resources/files/Mozzoni_resume.pdf';
         return false;
     });
 
